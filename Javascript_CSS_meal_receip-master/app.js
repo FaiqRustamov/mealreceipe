@@ -20,7 +20,9 @@ $(document).ready(function(){
 	$(".save").click(function(e){
 		var data = selectAll();
 		console.log(data);
-		localStorage.setItem("id",data);
+		var jsontype=JSON.stringify(data);
+        var changetype=JSON.parse(jsontype);
+		localStorage.setItem("id",changetype);
 	});
 	allEventListeners();
 });
